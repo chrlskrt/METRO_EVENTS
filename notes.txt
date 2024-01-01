@@ -1,0 +1,37 @@
+METRO EVENT	
+- an application designed to help everyone organize and join events
+- no invitations for events
+
+
+USERS
+-> user 
+	- receive notifications of upcoming events
+	- can request to become organizer
+	- receive notification whether application is accepted/declined
+	- can request to participate in events
+	- receive notificatifications regarding request to participate event
+	- reminders for upcoming events
+
+-> organizer
+	- registered as a user
+	- request to become organizer is sent to administrator
+	- create event
+	- accept/decline participants in events
+
+-> administrator
+	- manages the whole app
+	- accept/decline user to become organizer
+	- can promote/decline to become organizer
+	- accept/decline event creation
+
+EVENTS
+-> main purpose of app
+-> contains participants, upvotes, and reviews
+-> can be cancelled, users participating are then notified
+
+
+< NAVIGATION >
+- data - contains the json files that serve as database
+- helpers - contains the php files for handling different things to run the app
+- main - contains the files that the users will see ??
+	

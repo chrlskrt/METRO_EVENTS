@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
+@import url("https://fonts.googleapis.com/css?family=Single+Day");
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1,h2,h3,h4, .h3 {
+    font-family: 'Single Day', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 3em;
+}
+
+.heading {
+    font-family: 'Satisfy', sans-serif;
+    text-align: center;
+    font-size: 55px;
+}
+
+.he2 {
+    font-size: 40px;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.pageTitle {
+    height: 108.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(51, 53, 53);
+}
+
+.pageTitle > .he2 {
+    color: white;
+}
+
+/* SIDEBAR PHP */
+#sidebar {
+    height: 100%;
+    display: flex;
+    min-width: 30%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-right: 1px solid black;
+}
+
+.navBar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.navBar > section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.navv {
+    margin-top: 10px;
+    color: black;
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navv:hover {
+    text-decoration: underline;
+}
+
+/* LOG_IN and SIGN_UP */
+ .CreateNLog{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+  
+.CreateNLog > div {
+    width: 500px;
+    padding:10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+}
+  
+h1 {
+    text-align: center;
+}
+  
+.CreateNLog > div > div {
+    text-align: center;
+}
+  
+.formsch {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 450px;
+}
+
+/* MAIN */
+.container {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+/* EVENT POST Style Configs */
+
+.eventPostContainer {
+    border: 1px solid black;
+    height: max-content;
+    border-radius: 6px;
+}
+
+.eventBtnContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.viewEventContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+    border-top: 1px solid black;
+}
+.eventContainer {
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.createReviewContainer {
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+.reviewContainer {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    /* border-bottom: 1px solid black; */
+    border-top: 1px solid black;
+}
+
+.reviewContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* NOTIF POST Configs */
+.notifContainer {
+    flex: 1;
+    display: flex;
+    /* flex-direction: column; */
+    padding: 10px;
+    gap: 10px;
+    /* justify-content: flex-end; */
+    overflow: auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* MANAGE EVENTS */
+.dropdown-options {
+    display: none;
+    overflow: auto;
+    position: absolute;
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
+.dropdown:hover > .dropdown-options{
+    display: block;
+}
