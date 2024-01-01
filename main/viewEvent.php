@@ -43,7 +43,7 @@
         $time = toDisplayTime($event['time']);
 
         $display = '
-            <div class= "container" style="flex-direction: column;">
+            <div class= "container" style="flex-direction: column; flex-wrap: nowrap;">
                 <div>
                     <a class="navv" href="index.php">❰ BACK</a>
                 </div>
@@ -96,7 +96,7 @@
                         </div>'
                         :
                         '').
-                    (getReviews($event['reviews']))    
+                    (getReviews($event['reviews'], $event['id']))  
                 .'</div>
             </div>
         ';
@@ -105,24 +105,38 @@
         return $display;
     }
 
-    function getReviews($reviews){
+    function getReviews($reviews, $event_id){
+        global $currentUser;
         $reviews = array_reverse($reviews);
-        $str = "";
+        $str = '<div style="display: flex; flex-direction: column;">';
     
         foreach($reviews as $review){
             $str .= '
-                <div class="reviewContainer">
-                    <div class="p-2" style="display: flex; align-items: center">
-                        <img src="https://ui-avatars.com/api/?rounded=true&name=' . $review['username'] . '" alt="" class="profile-photo-sm">
+                <div class="reviewContainer" style="justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap:10px;">
+                        <div class="p-2" style="display: flex; align-items: center">
+                            <img src="https://ui-avatars.com/api/?rounded=true&name=' . $review['username'] . '" alt="" class="profile-photo-sm">
+                        </div>
+                        <div class="reviewContent">
+                            <h5>' . $review['username'] . '</h5>
+                            <p style="height: fit-content">' . $review['reviewBody'] . '</p>
+                        </div>
                     </div>
-                    <div class="reviewContent">
-                    <h5>' . $review['username'] . '</h5>
-                    <p style="height: fit-content">' . $review['reviewBody'] . '</p>
-                    </div>  
+                    '.
+                        (($currentUser['id'] === $review['uid']) ? '
+                            <div>
+                                <form method="POST" action="../helpers/deleteReview.php">
+                                    <input style="display: none;" name="review_id" value="'. $review['id'].'">
+                                    <button type="submit" name="eventId" value="'.$event_id.'" class="btn btn-outline-dark">🗑️</button>
+                                </form>
+                            </div>
+                        ': '')
+                    .' 
                 </div>
             ';
         }
     
+        $str .= '</div>';
         return $str;
     }
     
