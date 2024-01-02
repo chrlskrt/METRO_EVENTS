@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Metro Events</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
@@ -74,10 +75,15 @@
                         <div class="card-body" style="flex: none;">
                         <div class="eventBtnContainer">'.
                                 (($event['status'] != 'complete') ? 
-                                    '<form method="POST" action="../helpers/manageEventsHandler.php">
+                                    '<form method="POST" action="../helpers/manageEventsHandler.php" style="width:100%;">
                                             <input style="display: none;" name="eventName" value="'. $event['name'] .'">
                                             <input style="display: none;" name="eventId" value="'. $event['id'] .'">
-                                            <button type="submit" name="cancelEvent" class="btn btn-outline-dark">Cancel Event</button>
+                                            <div class="formsch" style="width: 100%;">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="reason" id="reason" placeholder="Enter reason for cancellation..." required>
+                                                </div>
+                                                <button type="submit" name="cancelEvent" class="btn btn-outline-dark">Cancel Event</button>
+                                            </div>
                                     </form>': '')  
                             .'
                         </div>

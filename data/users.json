@@ -6,5 +6,13 @@
         "lastName": "ADMIN1",
         "username": "admin101",
         "password": "admin101"
+    },
+    {
+        "id": 2,
+        "userType": "user",
+        "firstName": "Mariana",
+        "lastName": "Igor",
+        "username": "user1",
+        "password": "user1"
     }
 ]

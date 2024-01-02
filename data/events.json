@@ -11,5 +11,18 @@
         "upvotes": [],
         "participants": [],
         "reviews": []
+    },
+    {
+        "id": 2,
+        "status": "ongoing",
+        "organizerId": 1,
+        "name": "Monopoly Go! Trading",
+        "detail": "Don't miss out on the fun of trading stickers to complete your album!!",
+        "date": "2024-01-06",
+        "time": "08:00",
+        "place": "SM Seaside, SRP",
+        "upvotes":[],
+        "participants": [],
+        "reviews": []
     }
 ]

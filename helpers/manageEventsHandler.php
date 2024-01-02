@@ -14,7 +14,8 @@
 
         if (isset($_POST['cancelEvent'])){
             $new_notification['notifHeading'] = 'HEY :< EVENT HAS BEEN CANCELLED :<';
-            $new_notification['notifDetail'] = 'The event "<b>'. $_POST['eventName'].'</b>" has been cancelled.';
+            $new_notification['notifDetail'] = 'The event "<b>'. $_POST['eventName'].'</b>" has been cancelled.<br>
+                                                <br>Reason for cancellation: '.$_POST['reason'];
 
             deleteEvent(intval($_POST['eventId']));
         }

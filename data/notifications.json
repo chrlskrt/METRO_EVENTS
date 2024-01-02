@@ -1,1 +1,16 @@
-[]
+[
+    {
+        "id": 1,
+        "notifType": "event_join_request",
+        "targetId": 1,
+        "notifHeading": "A USER WANTS TO JOIN YOUR EVENT!",
+        "notifDetail": "<b>Mariana Igor<\/b> wants to join <b>SVT Seungkwan Birthday Bash<\/b>. Check it out on the <b> Manage Event Join Requests <\/b> tab."
+    },
+    {
+        "id": 2,
+        "notifType": "event_request",
+        "targetId": 2,
+        "notifHeading": "PARTICIPATION REJECTED",
+        "notifDetail": "Your request in participating the event \"<b>SVT Seungkwan Birthday Bash<\/b>\" has been rejected."
+    }
+]
